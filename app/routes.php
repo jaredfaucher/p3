@@ -20,7 +20,12 @@ Route::get('/lorem-ipsum', function()
 {
 	return View::make('lorem');
 });
-
+Route::post('/lorem-ipsum', function()
+{
+	$generator = new Badcow\LoremIpsum\Generator();
+	$paragraphs = $generator->getParagraphs($paragraphs);
+	echo implode('<p>', $paragraphs);
+});
 Route::get('/user-generator', function()
 {
 	return View::make('users');
