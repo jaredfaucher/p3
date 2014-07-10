@@ -22,12 +22,18 @@ Route::get('/lorem-ipsum', function()
 });
 Route::post('/lorem-ipsum', function()
 {
+	$paragraphNumber = Input::get('paragraphNumber');
 	$generator = new Badcow\LoremIpsum\Generator();
-	$paragraphs = $generator->getParagraphs($paragraphs);
+	$paragraphs = $generator->getParagraphs($paragraphNumber);
 	echo implode('<p>', $paragraphs);
 });
 Route::get('/user-generator', function()
 {
 	return View::make('users');
+});
+
+Route::post('/user-generator', function()
+{
+	# TODO
 });
 
