@@ -11,7 +11,7 @@
 			<h1>Random User Generator</h1>
 			<p>Create random user data for your application.</p>
 			<form>
-				How many paragraphs? (max:99): <input type="text" name="paragraphs"><br>
+				How many Users? (max:99): <input type="text" name="paragraphs"><br>
 				Include...<br>
 				<input type="checkbox" name="birthday">Birthday<br>
 				<input type="checkbox" name="profile">Profile<br>
