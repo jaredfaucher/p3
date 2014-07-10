@@ -10,6 +10,10 @@
 			<a href="/">Home</a>
 			<h1>Lorem Ipsum Generator</h1>
 			<p>Create random filler text for your applications.</p>
+			<form>
+				How many paragraphs? (max:99): <input type="text" name="paragraphs">
+				<input type="submit" value="submit">
+			</form>
 		</div>
 	</body>
 </html>
