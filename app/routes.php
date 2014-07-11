@@ -34,6 +34,10 @@ Route::get('/user-generator', function()
 
 Route::post('/user-generator', function()
 {
-	# TODO
+	require_once base_path().'/vendor/Faker/src/autoload.php';
+	$faker = Faker\Factory::create();
+	echo $faker->name;
+	echo $faker->address;
+	echo $faker->text;
 });
 
