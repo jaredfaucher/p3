@@ -22,10 +22,12 @@ Route::get('/lorem-ipsum', function()
 });
 Route::post('/lorem-ipsum', function()
 {
-	$paragraphNumber = Input::get('paragraphNumber');
+	/*$paragraphNumber = Input::get('paragraphNumber');
 	$generator = new Badcow\LoremIpsum\Generator();
 	$paragraphs = $generator->getParagraphs($paragraphNumber);
-	echo implode('<p>', $paragraphs);
+	echo implode('<p>', $paragraphs);*/
+	
+	return View::make('lorempost');
 });
 Route::get('/user-generator', function()
 {
@@ -34,10 +36,23 @@ Route::get('/user-generator', function()
 
 Route::post('/user-generator', function()
 {
-	require_once base_path().'/vendor/Faker/src/autoload.php';
-	$faker = Faker\Factory::create();
-	echo $faker->name;
-	echo $faker->address;
-	echo $faker->text;
+	/*$numberOfUsers = Input::get('users');
+	$birthday = Input::get('birthday');
+	$profile = Input::get('profile');
+	for ($i = 0; $i < $numberOfUsers; $i++)
+	{
+		require_once base_path().'/vendor/Faker/src/autoload.php';
+		$faker = Faker\Factory::create();
+		echo $faker->name;
+		if ($birthday)
+		{
+			echo $faker->birthday;
+		}
+		if ($profile)
+		{
+			echo $faker->text;
+		}
+		echo "<br>";
+	}*/
+	return View::make('userspost');
 });
-
