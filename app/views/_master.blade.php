@@ -6,6 +6,7 @@
 			@yield('title', 'Developers Best Friend')
 		</title>
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/p3.css">
 	</head>
 	<body>
 		<div class="container">

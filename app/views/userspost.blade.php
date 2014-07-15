@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-	<a href="/">Home</a>
+	<a href="/">Go Home</a>
 	<h1>Random User Generator</h1>
 	<br>
 	<dl>

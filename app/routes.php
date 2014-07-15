@@ -13,7 +13,7 @@ Route::post('/lorem-ipsum', function()
 {
 	// Input validation, returns error view if user enters non-integer or integer not in range
 	$paragraphNumber = Input::get('paragraphNumber');
-	if (!is_int($paragraphNumber) || ($paragraphNumber > 99 || $paragraphNumber < 1))
+	if (!ctype_digit($paragraphNumber) || ($paragraphNumber > 99 || $paragraphNumber < 1))
 	{
 		return View::make('error')->with('error', 'paragraphs');
 	}
@@ -34,7 +34,7 @@ Route::post('/user-generator', function()
 {
 	// Input validation, returns error view if user enters non-integer or integer not in range
 	$numberOfUsers = Input::get('users');
-	if (!is_int($numberOfUsers) || ($numberOfUsers > 99 || $numberOfUsers < 1))
+	if (!ctype_digit($numberOfUsers) || ($numberOfUsers > 99 || $numberOfUsers < 1))
 	{
 		return View::make('error')->with('error', 'users');
 	}

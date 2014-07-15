@@ -6,7 +6,7 @@
 
 @section('content')
 	<h1>Developer's Best Friend</h1>
-	<h3>by Jared Faucher</h3>
+	<blockquote><h4>by Jared Faucher<br>Dynamic Web Applications, Summer 2014</h4></blockquote>
 	<br>
 	<h2>Loren Ipsum Generator</h2>
 	<p>Create random filler text for your applications.</p>
