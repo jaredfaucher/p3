@@ -32,8 +32,10 @@
 		{{ $user->name }}
 		@if ($birthday)
 			{{ $user->dateTimeThisCentury->format('Y-m-d') }}
+		@endif
 		@if ($profile)
 			{{ $user->text }}
+		@endif
 		<br>
 	@endforeach
 @stop

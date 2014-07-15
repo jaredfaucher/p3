@@ -43,23 +43,8 @@ Route::post('/user-generator', function()
 		require_once base_path().'/vendor/fzaninotto/faker/src/autoload.php';
 		$faker = Faker\Factory::create();
 		$users[$i] = $faker;
-		/*
-		echo $faker->name;
-		if ($birthday)
-		{
-			echo $faker->dateTimeThisCentury->format('Y-m-d');
-		}
-		if ($profile)
-		{
-			echo $faker->text;
-		}
-		echo "<br>";*/
 	}
-
-	/*echo "<pre>";
-	print_r($users);
-	echo "</pre>";*/
-
-	echo $users[0]->name;
-	//return View::make('userspost')->with('users', $users);
+	return View::make('userspost')->with('users', $users)
+								  ->with('birthday', $birthday)
+								  ->with('profile', $profile);
 });
