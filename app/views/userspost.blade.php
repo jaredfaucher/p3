@@ -6,15 +6,17 @@
 
 @section('content')
 	<a href="/">Home</a>
-	<br>
+	<br><br>
+	<dl>
 	@foreach($users as $user)
-		{{ $user->name }}
+		<dt> {{ $user->name }} </dt>
 		@if ($birthday)
-			{{ $user->dateTimeThisCentury->format('Y-m-d') }}
+			<dd> {{ $user->dateTimeThisCentury->format('Y-m-d') }} </dd>
 		@endif
 		@if ($profile)
-			{{ $user->text }}
+			<dd> {{ $user->text }} </dd>
 		@endif
 		<br>
 	@endforeach
+	</dl>
 @stop
