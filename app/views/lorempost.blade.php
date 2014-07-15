@@ -5,12 +5,14 @@
 @stop
 
 @section('content')
-<a href="/">Home</a>
-<br><br>
+	<a href="/">Home</a>
+	<h1>Lorem Ipsum Generator</h1>
+	<br>
+	<!-- foreach loop printing out each paragraph in $paragraph between <p> tags -->
 	@foreach($paragraphs as $paragraph)
 		<p>
 			{{ $paragraph }}
 		</p>
 	@endforeach
-<br>
+	<br>
 @stop
